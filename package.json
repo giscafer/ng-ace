@@ -1,42 +1,49 @@
 {
-  "name": "ng2-ace",
-  "version": "0.0.15",
-  "description": "An ace editor directive for angular2.",
-  "main": "index.js",
+  "name": "ng-ace",
+  "version": "0.1.0",
+  "description": "An ace editor directive for angular.",
+  "main": "./bundles/ng-ace.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "build": "npm run clean && ngc && ng-packagr -p ng-package.json",
+    "compile": "babel src/index.js -o index.js --plugins transform-decorators-legacy,transform-class-properties --presets es2015"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seiyria/ng2-ace.git"
+    "url": "git+https://github.com/giscafer/ng-ace.git"
   },
   "keywords": [
     "ng2",
     "angular2",
-    "ace",
+    "angular5",
     "ace",
     "editor",
     "ng2-ace",
-    "angular2-ace"
+    "angular-ace"
   ],
-  "author": "Kyle Kemp <kyle@seiyria.com>",
+  "author": "giscafer <giscafer@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seiyria/ng2-ace/issues"
+    "url": "https://github.com/giscafer/ng-ace/issues"
   },
-  "scripts": {
-    "compile": "babel src/index.js -o index.js --plugins transform-decorators-legacy,transform-class-properties --presets es2015"
-  },
-  "homepage": "https://github.com/seiyria/ng2-ace#readme",
+  "homepage": "https://github.com/giscafer/ng-ace#readme",
   "dependencies": {
+    "@angular/core": "^5.0.0",
     "brace": "^0.8.0"
   },
   "peerDependencies": {
-    "@angular/core": "^2.0.0-rc.4"
+    "@angular/core": "^5.0.0"
   },
   "devDependencies": {
+    "@angular/cli": "^1.6.7",
+    "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@types/ace": "0.0.36",
+    "@types/braces": "^2.3.0",
+    "@types/node": "^9.4.0",
     "babel-plugin-transform-class-properties": "^6.9.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.9.0"
+    "babel-preset-es2015": "^6.9.0",
+    "ng-packagr": "^1.6.0"
   }
 }

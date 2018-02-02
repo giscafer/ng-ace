@@ -1,15 +1,21 @@
-# ng2-ace
-A basic ace editor directive for angular 2.
+# ng-ace
+
+[![npm package](https://img.shields.io/npm/v/ng-ace.svg)](https://www.npmjs.org/package/ng-ace)
+
+A basic ace editor directive for angular2\angular4\agnular5. base on [@seiyria/ng2-ace](https://github.com/seiyria/ng2-ace)
+
+Online Demo see https://github.com/giscafer/ng-form-builder
 
 # Install
-`npm i -s ng2-ace`
+
+`npm i ng-ace`
 
 # Sample Usage
 
-```js
-import { Component } from 'angular2/core';
+```ts
+import { Component } from '@angular/core';
 
-import { AceEditorDirective } from 'ng2-ace';
+import { AceEditorDirective } from 'ng-ace';
 
 import 'brace/theme/clouds';
 import 'brace/mode/sql';
@@ -37,4 +43,6 @@ export class MyComponent {
   }
 }
 ```
-Important pieces to note in the HTML template: `[ace-editor]` attribute, `[text]`, `[theme]`, `[mode]`, `[readOnly]`, `[options]` inputs, `(textChanged)` output. As per Ace, you must also make it a `display: block;` and give it a width and height.
+Important pieces to note in the HTML template: `[ace-editor]` attribute, `[text]`, `[theme]`, `[mode]`, `[readOnly]`, `[options]` inputs, `(textChanged)` ,`(editorRef)` output. As per Ace, you must also make it a `display: block;` and give it a width and height.
+
+
